@@ -25,10 +25,11 @@ public class EarthquakeActivity extends AppCompatActivity {
 //        earthquakes.add(new Earthquake("8.6", "Moscow", "2010.12.03"));
 //        earthquakes.add(new Earthquake("8.6", "Rio de Janeiro", "2010.12.03"));
 //        earthquakes.add(new Earthquake("8.6", "Paris", "2010.12.03"));
+        // Get the list of earthquakes from {@Link QueryUtils }
     ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
 
 
-        // Create a new {@link ArrayAdapter} of earthquakes
+        // Create a new adapter that takes the list  {@link ArrayAdapter} of earthquakes as input
         EarthquakeAdapter adapter = new EarthquakeAdapter(this, earthquakes);
 
         // Find a reference to the {@link ListView} in the layout
@@ -42,3 +43,4 @@ public class EarthquakeActivity extends AppCompatActivity {
         earthquakeListView.setAdapter(adapter);
     }
 }
+

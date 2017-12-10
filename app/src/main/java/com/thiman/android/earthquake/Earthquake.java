@@ -10,12 +10,12 @@ public class Earthquake {
     private String mLocation;
 
 
-    private String mDate;
+    private long mTimeInMiliseconds;
 
-    public Earthquake(String vMagnitude, String vLocation, String vDate) {
+    public Earthquake(String vMagnitude, String vLocation, long vTimeInMiliseconds) {
         this.mMagnitude = vMagnitude;
         this.mLocation = vLocation;
-        this.mDate = vDate;
+        this.mTimeInMiliseconds = vTimeInMiliseconds;
 
     }
 
@@ -27,7 +27,7 @@ public class Earthquake {
         return mLocation;
     }
 
-    public String getmDate() {
-        return mDate;
+    public long getmTimeInMiliseconds() {
+        return mTimeInMiliseconds;
     }
 }
